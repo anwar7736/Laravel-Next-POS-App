@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import NavBar from '../components/desktop';
+import ReportList from '../components/reportlist';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 
 class Reports extends React.Component{
@@ -10,7 +12,8 @@ class Reports extends React.Component{
  				<title>Reports</title>
  			</Head>
  			<NavBar/>
- 			<h1>This is our reports page</h1>
+ 			<ReportList/>
+ 			<Footer/>
  		</Fragment>
  		)
  }

@@ -5,6 +5,29 @@ import { AreaChart, Area, CartesianGrid, Tooltip, ResponsiveContainer } from 're
 
 class DashboardList extends React.Component{
  render(){
+        const dataTableColumn = [
+        {
+            name: 'Receipt',
+            selector: 'receipt_no',
+            sortable: true,
+        },
+        {
+            name: 'Date',
+            selector: 'receipt_date',
+            sortable: true,
+        },
+        {
+            name: 'Qty',
+            selector: 'qty',
+            sortable: true,
+        },
+        {
+            name: 'Total',
+            selector: 'total',
+            sortable: true,
+        },
+    ];
+
  	return(
  		 <Fragment>
                 <Container>
@@ -72,7 +95,7 @@ class DashboardList extends React.Component{
                                         paginationPerPage={6}
                                         pagination={true}
                                         title="Recent Transaction"
-                                        columns={this.props.dataTableColumn}
+                                        columns={dataTableColumn}
                                         data={this.props.dataTable}/>
                                 </Card.Body>
                             </Card>

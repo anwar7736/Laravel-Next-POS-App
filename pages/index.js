@@ -32,29 +32,6 @@ export async function getStaticProps(){
         },
 	];
 
-	const dataTableColumn = [
-		{
-            name: 'Receipt',
-            selector: 'receipt_no',
-            sortable: true,
-        },
-        {
-            name: 'Date',
-            selector: 'receipt_date',
-            sortable: true,
-        },
-        {
-            name: 'Qty',
-            selector: 'qty',
-            sortable: true,
-        },
-        {
-            name: 'Total',
-            selector: 'total',
-            sortable: true,
-        },
-	];
-
 	const dataTable = [
 	 {
             id: 1,
@@ -135,7 +112,6 @@ export async function getStaticProps(){
 			TotalCategory: '10',
 			TotalProduct: '30',
 			dataChart:dataChart,
-			dataTableColumn:dataTableColumn,
 			dataTable:dataTable,
 		}
 	}
@@ -144,6 +120,7 @@ export async function getStaticProps(){
 import React, {Component, Fragment} from 'react';
 import NavBar from '../components/desktop';
 import DashboardList from '../components/dashboardlist';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 
 class Index extends React.Component{
@@ -160,9 +137,9 @@ class Index extends React.Component{
 			   TotalCategory={this.props.TotalCategory}
 			   TotalProduct={this.props.TotalProduct}
 			   dataChart={this.props.dataChart}
-			   dataTableColumn={this.props.dataTableColumn}
 			   dataTable={this.props.dataTable}
  			/>
+            <Footer/>
  		</Fragment>
  		)
  }
